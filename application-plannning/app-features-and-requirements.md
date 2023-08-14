@@ -12,11 +12,11 @@
 
 ## Cabins
 
--  app neeeds a table view with all cabins, showing the cabin photo, name,
-   capacity, price, and current discount
+-  (DONE) app neeeds a table view with all cabins, showing the cabin photo,
+   name, capacity, price, and current discount
 
--  users should be able to update or delete a cabin, and to create new cabin
-   (including uploading a photo)
+-  (DONE) users should be able to update or delete a cabin, and to create new
+   cabin (including uploading a photo)
 
 ## Bookings
 
@@ -65,8 +65,8 @@
 
 ## Settings
 
--  Users should be able to define a few application-wide settings: breakfast
-   price, min and max nights/booking, max guests/booking
+-  (DONE) Users should be able to define a few application-wide settings:
+   breakfast price, min and max nights/booking, max guests/booking
 
 # UI (User Interface)
 
