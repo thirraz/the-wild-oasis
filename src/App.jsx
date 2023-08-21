@@ -1,6 +1,7 @@
 import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { Toaster } from "react-hot-toast"
 
 import GlobalStyles from "./styles/GlobalStyles"
 import Dashboard from "./pages/Dashboard"
@@ -10,9 +11,11 @@ import Settings from "./pages/Settings"
 import Bookings from "./pages/Bookings"
 import Account from "./pages/Account"
 import Login from "./pages/Login"
+import Checkin from "./pages/Checkin"
 import PageNotFound from "./pages/PageNotFound"
 import AppLayout from "./ui/AppLayout"
-import { Toaster } from "react-hot-toast"
+import Booking from "./pages/Booking"
+import ProtectedRoute from "./ui/ProtectedRoute"
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -24,12 +27,19 @@ const queryClient = new QueryClient({
 
 const router = createBrowserRouter([
 	{
-		element: <AppLayout />,
+		element: (
+			<ProtectedRoute>
+				<AppLayout />
+			</ProtectedRoute>
+		),
+
 		errorElement: <PageNotFound />,
 		children: [
 			{ path: "/", element: <Navigate replace to="dashboard" /> },
 			{ path: "/dashboard", element: <Dashboard /> },
 			{ path: "/bookings", element: <Bookings /> },
+			{ path: "/bookings/:bookingId", element: <Booking /> },
+			{ path: "/checkin/:bookingId", element: <Checkin /> },
 			{ path: "/cabins", element: <Cabins /> },
 			{ path: "/users", element: <Users /> },
 			{ path: "/settings", element: <Settings /> },
@@ -62,7 +72,8 @@ export default function App() {
 						maxWidth: "500px",
 						padding: "16px 24px",
 						backgroundColor: "var(--color-grey-0)",
-						color: "var(--color-grey-700)"
+						color: "var(--color-grey-700)",
+						textAlign: "center"
 					}
 				}}
 			/>
