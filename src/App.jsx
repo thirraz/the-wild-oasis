@@ -16,6 +16,7 @@ import PageNotFound from "./pages/PageNotFound"
 import AppLayout from "./ui/AppLayout"
 import Booking from "./pages/Booking"
 import ProtectedRoute from "./ui/ProtectedRoute"
+import { DarkModeProvider } from "./context/DarkModeContext.jsx"
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -51,32 +52,35 @@ const router = createBrowserRouter([
 
 export default function App() {
 	return (
-		<QueryClientProvider client={queryClient}>
-			<ReactQueryDevtools initialIsOpen={false} />
-			<GlobalStyles />
-			<RouterProvider router={router} />
+		<DarkModeProvider>
+			<QueryClientProvider client={queryClient}>
+				<ReactQueryDevtools initialIsOpen={false} />
+				<GlobalStyles />
+				<RouterProvider router={router} />
 
-			<Toaster
-				position="top-center"
-				gutter={12}
-				containerStyle={{ margin: "8px" }}
-				toastOptionns={{
-					success: {
-						duration: 3000
-					},
-					error: {
-						duration: 5000
-					},
-					style: {
-						fontSize: "16px",
-						maxWidth: "500px",
-						padding: "16px 24px",
-						backgroundColor: "var(--color-grey-0)",
-						color: "var(--color-grey-700)",
-						textAlign: "center"
-					}
-				}}
-			/>
-		</QueryClientProvider>
+				<Toaster
+					position="top-center"
+					gutter={12}
+					containerStyle={{ margin: "8px" }}
+					toastOptionns={{
+						success: {
+							duration: 3000
+						},
+						error: {
+							duration: 5000
+						},
+						style: {
+							fontSize: "16px",
+							maxWidth: "500px",
+							padding: "16px 24px",
+							backgroundColor: "var(--color-grey-0)",
+							color: "var(--color-grey-700)",
+							textAlign: "center"
+						}
+					}}
+				/>
+			</QueryClientProvider>
+			s
+		</DarkModeProvider>
 	)
 }
