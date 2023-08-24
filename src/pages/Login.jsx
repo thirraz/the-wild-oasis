@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import LoginForm from "../features/authentication/LoginForm"
-import CabinTable from "../features/cabins/CabinTable"
 import Heading from "../ui/Heading"
 import Logo from "../ui/Logo"
 

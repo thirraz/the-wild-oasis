@@ -50,19 +50,19 @@
 
 ## Dashboard
 
--  The initial app screen shoul be a dashboard, to display important information
-   for the last 7, 30 or 90 days:
+-  (DONE) The initial app screen shoul be a dashboard, to display important
+   information for the last 7, 30 or 90 days:
 
-   -  A list of guests checking in and out on the current day. Users should be
-      able too perform these tasks from here
+   -  (DONE) A list of guests checking in and out on the current day. Users
+      should be able too perform these tasks from here
 
-   -  Statistics on recent bookings, sales, check ins, and accupancy rate
+   -  (DONE) Statistics on recent bookings, sales, check ins, and accupancy rate
 
-   -  A chart showing all daily hotel sales, showing both "total" sales and
-      "extras" sales (only breakfast at the moment)
+   -  (DONE) A chart showing all daily hotel sales, showing both "total" sales
+      and "extras" sales (only breakfast at the moment)
 
-   -  A chart showing statistics on stay durations, as this is an important
-      metric for the hotel
+   -  (DONE) A chart showing statistics on stay durations, as this is an
+      important metric for the hotel
 
 ## Settings
 

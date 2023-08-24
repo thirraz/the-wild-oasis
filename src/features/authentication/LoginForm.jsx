@@ -8,8 +8,8 @@ import FormRowVertical from "../../ui/FormRowVertical"
 import { useLogin } from "./useLogin"
 
 function LoginForm() {
-	const [email, setEmail] = useState("jonas@example.com")
-	const [password, setPassword] = useState("pass0987")
+	const [email, setEmail] = useState("temegof503@pbridal.com")
+	const [password, setPassword] = useState("#6B2h3mF")
 	const { login, isLoading } = useLogin()
 
 	function handleSubmit(e) {
@@ -29,34 +29,39 @@ function LoginForm() {
 	}
 
 	return (
-		<Form onSubmit={handleSubmit}>
-			<FormRowVertical label="Email address">
-				<Input
-					type="email"
-					id="email"
-					// This makes this form better for password managers
-					autoComplete="username"
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-					disabled={isLoading}
-				/>
-			</FormRowVertical>
-			<FormRowVertical label="Password">
-				<Input
-					type="password"
-					id="password"
-					autoComplete="current-password"
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-					disabled={isLoading}
-				/>
-			</FormRowVertical>
-			<FormRowVertical>
-				<Button size="large" disabled={isLoading}>
-					{!isLoading ? "Log in" : <SpinnerMini />}
-				</Button>
-			</FormRowVertical>
-		</Form>
+		<>
+			<Form onSubmit={handleSubmit}>
+				<FormRowVertical label="Email address">
+					<Input
+						type="email"
+						id="email"
+						// This makes this form better for password managers
+						autoComplete="username"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						disabled={isLoading}
+					/>
+				</FormRowVertical>
+				<FormRowVertical label="Password">
+					<Input
+						type="password"
+						id="password"
+						autoComplete="current-password"
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+						disabled={isLoading}
+					/>
+				</FormRowVertical>
+				<FormRowVertical>
+					<Button size="large" disabled={isLoading}>
+						{!isLoading ? "Log in" : <SpinnerMini />}
+					</Button>
+				</FormRowVertical>
+				<p style={{ textAlign: "center" }}>
+					Please click on button to see the app
+				</p>
+			</Form>
+		</>
 	)
 }
 
