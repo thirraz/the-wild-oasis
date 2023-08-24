@@ -6,6 +6,12 @@ import styled, { css } from "styled-components"
  */
 const Heading = styled.h1`
 	${(props) =>
+		props.alignCenter &&
+		css`
+			text-align: center;
+		`}
+
+	${(props) =>
 		props.as === "h1" &&
 		css`
 			font-size: 3rem;
