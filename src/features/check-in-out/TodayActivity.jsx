@@ -44,7 +44,7 @@ function TodayActivity() {
 	return (
 		<StyledToday>
 			<Row type="horizontal">
-				<Heading as="h2">TodayActivity</Heading>
+				<Heading as="h2">Today's Activity</Heading>
 			</Row>
 
 			{/* 1st ternary condition */}
